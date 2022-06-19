@@ -1,0 +1,11 @@
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('bat', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('cmd', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('com', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('cpl', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('exe', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('scr', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('js', TRUE, TRUE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('hwp', TRUE, FALSE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('doc', FALSE, FALSE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('xlxs', FALSE, FALSE);
+INSERT INTO EXTENSION (name, use_yn, fixed_yn) VALUES('ppt', TRUE, FALSE);

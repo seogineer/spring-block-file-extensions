@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>파일 확장자 차단</title>
+
+    <!--부트스트랩 css 추가-->
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+</head>
+<body>
+    <h1>파일 확장자 차단</h1>
+
+    <table>
+        <tbody>
+        <tr id="fixed">
+            <th scope="row">고정 확장자</th>
+        </tr>
+        <tr>
+            <th scope="row">커스텀 확장자</th>
+            <td colspan="7">
+                <input type="text" id="name" name="name" maxlength=20 required>
+                <input type="button" value="+추가" onclick="main.add()">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td colspan="7" style = "border: 1px solid; width: 300px; height: 200px;">
+                <div id="customCount"></div>
+                <div id="exts"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--부트스트랩 js, jquery 추가-->
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/app/main.js"></script>
+</body>
+</html>
