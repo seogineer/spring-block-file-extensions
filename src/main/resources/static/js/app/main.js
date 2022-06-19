@@ -33,7 +33,7 @@ let main = {
                         exts.add(ext.name);
 
                         let inputExt =
-                            '<div style="border: 1px solid; width: 45px; height: 30px; display: inline-block;">'
+                            '<div style="border: 1px solid; display: inline-block;">'
                             + ext.name +
                             '<i className="close" onClick="main.close(this)"> x</i></div>';
 
@@ -63,7 +63,7 @@ let main = {
         main.create(ext, true, false);
 
         let inputExt =
-            '<div style="border: 1px solid; width: 45px; height: 30px; display: inline-block;">'
+            '<div style="border: 1px solid; display: inline-block;">'
             + $("#name").val() +
             '<i className="close" onClick="main.close(this)"> x</i></div>';
         $("#exts").append(inputExt);
