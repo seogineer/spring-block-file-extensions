@@ -80,7 +80,7 @@ let main = {
         main.count(--customExtensionCount);
     },
     check: function (e) {
-        if($("#e.id").is(':checked')){
+        if($("#" + e.id).is(':checked')){
             main.update(e.id, true);
         } else {
             main.update(e.id, false);
