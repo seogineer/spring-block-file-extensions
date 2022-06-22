@@ -45,6 +45,13 @@ let main = {
             });
 
             main.count(customExtensionCount);
+
+        });
+
+        $(document).bind('keypress', function(e) {
+            if(e.keyCode === 13){
+                $('#add').trigger('click');
+            }
         });
     },
     add: function () {
