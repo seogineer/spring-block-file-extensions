@@ -7,6 +7,7 @@ import com.seogineer.springblockfileextensions.service.ExtensionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,7 @@ public class WebRestController {
     }
 
     @PostMapping("/extension")
-    public Long create(@RequestBody ExtensionCreateRequestDto dto){
+    public Long create(@RequestBody @Valid ExtensionCreateRequestDto dto){
         return extensionService.create(dto);
     }
 

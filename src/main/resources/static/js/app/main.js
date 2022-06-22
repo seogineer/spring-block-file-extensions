@@ -54,6 +54,12 @@ let main = {
         }
 
         let ext = $("#name").val();
+
+        if(main.isValid(ext) === false){
+            alert("1~20자 이내 알파벳 소문자만 입력할 수 있습니다.");
+            return;
+        }
+
         if(exts.has(ext)){
             $("#name").val("");
             return;
@@ -111,6 +117,12 @@ let main = {
                 "useYn" : useYn
             })
         })
+    },
+    isValid: function(name){
+        const regex = /^[a-z]{1,20}$/;
+        if(!regex.test(name)){
+            return false;
+        }
     }
 };
 

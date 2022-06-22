@@ -1,6 +1,7 @@
 package com.seogineer.springblockfileextensions.service;
 
 import com.seogineer.springblockfileextensions.common.exception.ExtensionNotFoundException;
+import com.seogineer.springblockfileextensions.common.exception.ExtensionNumberExceedException;
 import com.seogineer.springblockfileextensions.domain.extension.Extension;
 import com.seogineer.springblockfileextensions.domain.extension.ExtensionRepository;
 import com.seogineer.springblockfileextensions.dto.extension.ExtensionCreateRequestDto;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class ExtensionService {
+    private final int EXT_MAX = 200;
     private ExtensionRepository extensionRepository;
 
     @Transactional(readOnly = true)
@@ -27,6 +29,10 @@ public class ExtensionService {
 
     @Transactional
     public Long create(ExtensionCreateRequestDto dto){
+        if(extensionRepository.findByUseYnTrue().size() == EXT_MAX){
+            throw new ExtensionNumberExceedException();
+        }
+
         Extension extension = extensionRepository.findByName(dto.getName());
 
         if(extension == null){
